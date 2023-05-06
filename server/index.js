@@ -1,5 +1,6 @@
 const express = require("express");
 const axios = require('axios');
+require('dotenv').config()
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -9,7 +10,7 @@ let configFigma = {
   maxBodyLength: Infinity,
   url: '',
   headers: { 
-    'X-FIGMA-TOKEN': 'figd_ZThu3qadp0LnWViRLpg5ubkvy9fk9RvI-kHv7-p1'
+    'X-FIGMA-TOKEN': process.env.FIGMA_API_KEY
   }
 };
 
